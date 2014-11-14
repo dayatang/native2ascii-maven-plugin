@@ -1,0 +1,172 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>mojo-parent</artifactId>
+		<version>28</version>
+	</parent>
+
+	<groupId>com.dayatang.maven.mojo</groupId>
+	<artifactId>native2ascii-maven-plugin</artifactId>
+	<version>1.0-beta-1</version>
+	<packaging>maven-plugin</packaging>
+
+	<name>Native2Ascii Maven Plugin</name>
+	<description>Converts files with characters in any supported character encoding to one with ASCII and/or Unicode escapes.</description>
+	<url>http://mojo.codehaus.org/native2ascii-maven-plugin/</url>
+	<inceptionYear>2007</inceptionYear>
+	<licenses>
+		<license>
+			<name>The MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>godin</id>
+			<name>Evgeny Mandrikov</name>
+			<email>mandrikov@gmail.com</email>
+			<timezone>+3</timezone>
+			<organization>SonarSource</organization>
+			<organizationUrl>http://sonarsource.com</organizationUrl>
+		</developer>
+		<developer>
+			<id>dantran</id>
+			<name>Dan Tran</name>
+			<email>dtran@gmail.com</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<name>Martin Thelian</name>
+			<roles>
+				<role>Contributer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<prerequisites>
+		<maven>2.0.6</maven>
+	</prerequisites>
+
+	<scm>
+		<connection>scm:svn:http://www.dayatang.com/svn/dayatang/maven/mojo/native2ascii-maven-plugin/trunk/</connection>
+		<developerConnection>scm:svn:http://www.dayatang.com/svn/dayatang/maven/mojo/native2ascii-maven-plugin/trunk/</developerConnection>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>dayatang.nexus.release</id>
+			<name>Dayatang release repository</name>
+			<url>dav:http://www.dayatang.com:8080/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>dayatang.nexus.snapshots</id>
+			<name>Dayatang snapshot repository</name>
+			<url>dav:http://www.dayatang.com:8080/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<issueManagement>
+		<system>JIRA</system>
+		<url>http://jira.codehaus.org/browse/MOJO/component/12536</url>
+	</issueManagement>
+
+	<repositories>
+		<repository>
+			<id>dayatang-releases</id>
+			<url>http://www.dayatang.com/maven2/public-release</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>dayatang-snapshots</id>
+			<url>http://www.dayatang.com/maven2/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jboss release</id>
+			<url>https://repository.jboss.org/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jboss snapshots</id>
+			<url>https://repository.jboss.org/nexus/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>dayatang-releases</id>
+			<url>http://www.dayatang.com/maven2/public-release</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>dayatang-snapshots</id>
+			<url>http://www.dayatang.com/maven2/public-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>glassfish</id>
+			<url>http://download.java.net/maven/glassfish</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-plugin-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-project</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
