@@ -51,7 +51,9 @@
             </roles>
         </developer>
         <developer>
+            <id>khajavi</id>
             <name>Milad Khajavi</name>
+            <email>khajavi@gmail.com</email>
             <roles>
                 <role>Contributor</role>
             </roles>
